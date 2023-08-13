@@ -1,0 +1,1 @@
+this directory is about variables, if, if..else and while loop
