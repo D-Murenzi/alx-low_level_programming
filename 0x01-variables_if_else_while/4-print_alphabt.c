@@ -9,7 +9,6 @@
 int main(void)
 {
 	int a;
-	int A;
 
 	for (a = 'a'; ((a >= 97) && (a <= 122)); a++)
 	{
