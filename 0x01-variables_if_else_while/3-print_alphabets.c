@@ -8,19 +8,19 @@
  */
 int main(void)
 {
-        int a;
+	int a;
 	int A;
 
-        for (A = 'A';((A >= 65) && (A <= 90)); A++)
-        {
-                putchar(A);
-
-        }
-	for (a = 'a'; ((a >= 97) && (a <=122)); a++)
+	for (a = 'a'; ((a >= 97) && (a <= 122)); a++)
 	{
 		putchar(a);
 	}
-        putchar('\n');
 
-        return (0);
+	for (A = 'A'; ((A >= 65) && (A <= 90)); A++)
+	{
+		putchar(A);
+	}
+	putchar('\n');
+
+	return (0);
 }
