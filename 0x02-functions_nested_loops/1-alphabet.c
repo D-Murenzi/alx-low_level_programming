@@ -7,14 +7,14 @@
  */
 void print_alphabet(void)/*prints lowercase letters*/
 {
-	int a = '97';
+	int a = 'a';
 
 	while ((a >= 97) && (a <= 122))
 	{
 		_putchar(a);
 		a++;
 	}
-
+}
 /**
  * main-call other functions
  * this func
