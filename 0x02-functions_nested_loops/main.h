@@ -3,7 +3,8 @@
 #ifndef MAIN_H_INCLUDED
 #define MAIN_H_INCLUDED
 
-// Declare the _putchar function
+/* Declare the _putchar function*/
+
 int _putchar(void);
 
 #endif
