@@ -1,11 +1,11 @@
 /*this program prints _putchar on the console*/
-#include <stdio.h>
+
+#include "main.h"
 /**
  * main-function calls other function
  * _putchar-this function prints the _putchar string on the console
  * Return: 0 for successfully completion of the function
  */
-int _putchar(void);
 
 int _putchar(void)
 {
