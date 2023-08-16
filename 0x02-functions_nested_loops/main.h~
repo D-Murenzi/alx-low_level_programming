@@ -1,4 +1,0 @@
-/* this is the header file for many projects to call on*/
-
-int _putchar(void);
-
