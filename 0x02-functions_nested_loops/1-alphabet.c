@@ -14,16 +14,7 @@ void print_alphabet(void)/*prints lowercase letters*/
 		_putchar(a);
 		a++;
 	}
-}
-/**
- * main-call other functions
- * this func
- * Return: success is 0
- */
-int main(void)
-{
-	print_alphabet();
 	_putchar('\n');
-
-	return (0);
 }
+
+int main(void);
