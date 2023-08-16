@@ -1,21 +1,25 @@
 /*this program prints lower case alphabets */
 #include "main.h"
+
 /**
- * main-call other functions
  * print_alphabet-prints lower case letters
- * Return: success id 0
+ * Return-void
  */
-
-void print_alphabet(void)
+void print_alphabet(void)/*prints lowercase letters*/
 {
-	int a '97';
+	int a = '97';
 
-	while((a>=97)&&(a<=122))
+	while ((a >= 97) && (a <= 122))
 	{
 		_putchar(a);
 		a++;
 	}
 
+/**
+ * main-call other functions
+ * this func
+ * Return: success is 0
+ */
 int main(void)
 {
 	print_alphabet();
