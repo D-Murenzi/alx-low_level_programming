@@ -7,7 +7,7 @@
  * Return: 0 for successfully completion of the function
  */
 
-int _putchar(void)
+int main(void)
 {
 	putchar('_');
 	putchar('p');
@@ -18,12 +18,6 @@ int _putchar(void)
 	putchar('a');
 	putchar('r');
 	putchar('\n');
-
-	return (0);
-}
-int main(void)
-{
-	_putchar();
 
 	return (0);
 }
