@@ -11,7 +11,7 @@ int _isdigit(int c)
 {
 	int d;
 
-	if ((d >= 48) && (d <= 57))
+	if ((d >= '0') && (d <= '9'))
 	{
 		d = 1;
 	}
@@ -20,4 +20,23 @@ int _isdigit(int c)
 		d = 0;
 	}
 	return (d);
+}
+
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char c;
+
+    c = '0';
+    printf("%c: %d\n", c, _isdigit(c));
+    c = 'a';
+    printf("%c: %d\n", c, _isdigit(c));
+    return (0);
 }
