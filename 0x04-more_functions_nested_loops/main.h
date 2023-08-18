@@ -1,5 +1,3 @@
-/* this isheader file for this project */
-
 #ifndef MAIN_H
 #define MAIN_H
 
