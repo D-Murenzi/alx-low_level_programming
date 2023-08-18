@@ -1,5 +1,5 @@
 /* this functions checks if an input from user is a digit or not */
-#include <stdio>
+#include <stdio.h>
 
 /**
  * _isdigit-function takes input and tells if it digit or not
