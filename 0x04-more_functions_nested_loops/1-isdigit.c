@@ -1,14 +1,11 @@
-/* this functions checks if an input from user is a digit or not */
 #include "main.h"
 
 /**
- * _isdigit-function takes input and tells if it digit or not
- * @c: is an interger input
- * Return: 1 if its digit and 0 if its not
+ * _isdigit - checks for a digit (0 through 9)
+ * @c: int to be checked
+ * Return: 1 if c is a digit, 0 otherwise
  */
-
 int _isdigit(int c)
 {
-	return ((c >= '0') $$ (c <= '9'));
+	return (c >= '0' && c <= '9');
 }
-
