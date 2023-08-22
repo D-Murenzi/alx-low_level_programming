@@ -2,8 +2,8 @@
 #include "main.h"
 /**
  * swap_int-swaps the values of two ints
- * @inta: is an interger stored at certain adress
- * @intb: is an integer to be swapt too
+ * @a: is an interger stored at certain adress
+ * @b: is an integer to be swapt too
  * Return: avoid for success
  */
 
