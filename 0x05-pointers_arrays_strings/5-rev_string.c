@@ -9,7 +9,7 @@
 void rev_string(char *s)
 {
 	int n=_strlen(s);
-	char my[n];
+	char my[1500];
 	int a=0;
 
 	while (n > 0)
@@ -18,7 +18,10 @@ void rev_string(char *s)
 		a++;
 		n--;
 	}
-	for (int i=0; i < _strlen(s); i++)
+
+	int i;
+
+	for (i=0; i < _strlen(s); i++)
 	s[i]=my[i];
 }
 		

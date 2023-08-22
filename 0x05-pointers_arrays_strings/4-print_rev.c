@@ -21,7 +21,7 @@ int _strlen(char *s)
 
 /**
  * print_rev-reverses the string
- * @*s: is string input
+ * @s: is string input
  * Return: nothing
  */
 
