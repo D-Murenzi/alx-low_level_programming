@@ -11,20 +11,18 @@
 char *_strcat(char *dest, char *src)
 {
 	char *first;
-	char sentence[1000];
-	int n;
-	int b;
 
-	first = sentence;
-
-	for (n = 0; *(dest + n) != '\0'; n++)
+	first = dest;
+	while (*dest != '\0')
 	{
-		sentence[n] = *(dest + n);
+		dest++;
 	}
-	for (b = 0; *(src + b) != '\0'; b++)
+	while (*src != '\0')
 	{
-		sentence[n + b] = *(src + b);
+		*dest = *src;
+		dest++;
+		src++;
 	}
-	sentence[n + b] = '\0';
+	*dest = '\0';
 	return (first);
 }
