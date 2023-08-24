@@ -16,7 +16,7 @@ char *_strcat(char *dest, char *src)
 	int a;
 	int b;
 
-	first = &sentence;
+	first = sentence;
 
 	for (n = 0; *(dest + n) != '\0'; n++)
 	{
