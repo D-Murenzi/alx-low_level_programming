@@ -13,7 +13,6 @@ char *_strcat(char *dest, char *src)
 	char *first;
 	char sentence[1000];
 	int n;
-	int a;
 	int b;
 
 	first = sentence;
@@ -24,9 +23,8 @@ char *_strcat(char *dest, char *src)
 	}
 	for (b = 0; *(src + b) != '\0'; b++)
 	{
-		a = n + b;
-		sentence[a] = *(src + b);
+		sentence[n + b] = *(src + b);
 	}
-	sentence[a] = '\0';
+	sentence[n + b] = '\0';
 	return (first);
 }
