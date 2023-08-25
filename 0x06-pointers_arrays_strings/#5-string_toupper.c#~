@@ -2,15 +2,12 @@
 #include "main.h"
 /**
  * string_toupper- converts small letters to capital
- * @str:pointer input
+ * @:pointer input
  * Return: pointer
  */
 
 char *string_toupper(char *str)
 {
-	char *original;
-
-	original = str;
 	while (*str != '\0')
 	{
 		if ((*str >= 97) && (*str <= 122))
@@ -19,5 +16,5 @@ char *string_toupper(char *str)
 		}
 		str++;
 	}
-	return (original);
+	return (str);
 }
