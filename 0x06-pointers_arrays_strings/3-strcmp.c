@@ -16,17 +16,6 @@ int _strcmp(char *s1, char *s2)
 		s1++;
 		s2++;
 	}
-	if ((*s1 == '\0') && (*s2 == '\0'))
-	{
-		b = 0;
-	}
-	else if (*s1 < *s2)
-	{
-		b = -*s1;
-	}
-	else if (*s1 > *s2)
-	{
-		b = *s1;
-	}
+	b = (*s1 - *s2);
 	return (b);
 }
