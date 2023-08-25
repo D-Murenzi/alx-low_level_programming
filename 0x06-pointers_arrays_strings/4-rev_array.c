@@ -20,6 +20,7 @@ void reverse_array(int *a, int n)
 		*b = *temp
 		a++;
 		b--;
+		n--;
 	}
 	return ();
 }
