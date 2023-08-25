@@ -1,4 +1,4 @@
-/* this is a function that reverses the elements of an array */
+0;276;0c/* this is a function that reverses the elements of an array */
 #include "main.h"
 /**
  * reverse_array-this reverses elements of array
@@ -21,5 +21,5 @@ void reverse_array(int *a, int n)
 		a++;
 		b--;
 	}
-	return (0);
+	return ();
 }
