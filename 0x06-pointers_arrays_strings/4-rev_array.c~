@@ -1,6 +1,6 @@
 /* this is a function that reverses the elements of an array */
 #include "main.h"
-11;rgb:0000/0000/0000/**
+/**
  * reverse_array-this reverses elements of array
  * @a: pointer to the array
  * @n: being the number of elements if an array
@@ -10,17 +10,13 @@
 void reverse_array(int *a, int n)
 {
 	int *b;
-	int temp;
 
-	b = (a + (n - 1));
+	b = a;
 	while (n > 0)
 	{
-		temp = *a;
-		*a = *b;
-		*b = temp;
+		*a = *(b + (n-1));
 		a++;
-		b--;
 		n--;
 	}
-	return;
+	return (0);
 }
