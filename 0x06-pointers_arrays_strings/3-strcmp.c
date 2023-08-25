@@ -22,11 +22,11 @@ int _strcmp(char *s1, char *s2)
 	}
 	else if (*s1 < *s2)
 	{
-		b = -1;
+		b < 0;
 	}
 	else if (*s1 > *s2)
 	{
-		b = 1;
+		b > 0;
 	}
 	return (b);
 }
