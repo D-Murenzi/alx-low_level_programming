@@ -1,4 +1,5 @@
-/* this function compares two string and returns the length of similarities at */
+/* this function compares two string and*/
+/*returns the length of similarities at*/
 /* the beggining of the strings */
 #include "main.h"
 /**
@@ -12,7 +13,7 @@ unsigned int _strspn(char *s, char *accept)
 	int n;
 
 	n = 0;
-	while (*s == *accept)
+	while ((*s == *accept) && (*s != '\0'))
 	{
 		n++;
 		s++;
