@@ -7,7 +7,7 @@
  * @y: value to raise x in
  * Return: power of x raised to value x
  */
-int _pow_recursion(int x, int y);
+int _pow_recursion(int x, int y)
 {
 	if (y < 0)
 	{
