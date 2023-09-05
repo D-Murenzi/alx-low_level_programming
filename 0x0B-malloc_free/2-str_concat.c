@@ -32,7 +32,6 @@ char *str_concat(char *s1, char *s2)
 	char *d;
 	unsigned int e;
 	unsigned int f;
-	char *g;
 
 	e = 0;
 	f = 0;
@@ -47,7 +46,6 @@ char *str_concat(char *s1, char *s2)
 	}
 	c = length(s2);
 	d = malloc(((b + c) + 1) * sizeof(char));
-	g = d;
 	while (e < b)
 	{
 		d[e] = s1[e];
@@ -58,5 +56,6 @@ char *str_concat(char *s1, char *s2)
 		d[e + f] = s2[f];
 		f++;
 	}
-	return (g);
+	return (d);
 }
+free(d);
