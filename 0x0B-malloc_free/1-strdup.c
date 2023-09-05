@@ -1,6 +1,7 @@
 /* function that writes a duplicate of a string in allocated memory */
 #include <stdlib.h>
 #include "main.h"
+#include <stdio.h>
 
 /**
  * length-calculates the lenght of string
@@ -40,11 +41,9 @@ char *_strdup(char *str)
 	if (p != NULL)
 	{
 		c = p;
-		while (b < (length(str) + 1))
+		while (b <= (length(str) + 1))
 		{
-			*p = *str;
-			p++;
-			str++;
+			p[b] = str[b];
 			b++;
 		}
 		return (c);
