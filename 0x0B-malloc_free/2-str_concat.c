@@ -30,8 +30,8 @@ char *str_concat(char *s1, char *s2)
 	unsigned int b;
 	unsigned int c;
 	char *d;
-	int e;
-	int f;
+	unsigned int e;
+	unsigned int f;
 	char *g;
 
 	e = 0;
