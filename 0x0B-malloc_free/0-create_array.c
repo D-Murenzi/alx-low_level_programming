@@ -1,6 +1,6 @@
 /* this progrma contain fa function that  creates an array of certain size a*/
 /* and its initialized with certain character */
-
+#include <stdlib.h>
 #include "main.h"
 /**
  * create_array-creates an array
@@ -11,7 +11,7 @@
 char *create_array(unsigned int size, char c)
 {
 	char *b;
-	int a;
+	unsigned int a;
 
 	a = 0;
 	b = malloc(size * sizeof(char));
