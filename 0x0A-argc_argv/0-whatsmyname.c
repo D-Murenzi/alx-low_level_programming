@@ -1,8 +1,10 @@
 /* this function prints its name*/
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
+
 /**
- * main-call the function and prints its name
+ * _main-call the function and prints its name
  * @argc: number arguments main function receives
  * @argv:array of strings made of arguments
  * Return: 0 on success
