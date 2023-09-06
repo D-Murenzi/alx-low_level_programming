@@ -23,11 +23,15 @@ void free_grid(int **grid, int height)
 	}
 	else
 	{
-		for (a = 0; a < height; a++)
+		while (grid != NULL)
 		{
-			free(grid[a]);
+			for (a = 0; a < height; a++)
+			{
+				free(grid[][a]);
+			}
+			free(grid);
+			grid++;
 		}
-		free(grid);
 		return;
 	}
 }
