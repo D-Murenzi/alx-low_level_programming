@@ -32,13 +32,14 @@ int **alloc_grid(int width, int height)
 		/*now each element of grid holds a pointer to a memory that*/
 		/*can hold an array of size height*/
 
-		if (*grid == NULL)
+		if (grid[a] == NULL)
 		{
 			for (a = 0; a < width; a++)
 			{
 				free(grid[a]);
-				free(grid);
-				return (NULL);
+			}
+			free(grid);
+			return (NULL);
 			}
 		}
 		for (b = 0; b < height; b++)
