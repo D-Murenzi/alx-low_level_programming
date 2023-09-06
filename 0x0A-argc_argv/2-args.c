@@ -1,4 +1,5 @@
 /* this function prints the number of arguments passed to it */
+#include <stdio.h>
 #include "main.h"
 #include <stdlib.h>
 /**

@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 /**
- * _main-call the function and prints its name
+ * main-call the function and prints its name
  * @argc: number arguments main function receives
  * @argv:array of strings made of arguments
  * Return: 0 on success
