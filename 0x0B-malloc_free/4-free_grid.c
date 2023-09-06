@@ -14,12 +14,12 @@ void free_grid(int **grid, int height)
 
 	if (grid == NULL)
 	{
-		return ();
+		return;
 	}
 	else if (height <= 0)
 	{
 		free(grid);
-		return ();
+		return;
 	}
 	else
 	{
@@ -28,6 +28,6 @@ void free_grid(int **grid, int height)
 			free(grid[a]);
 		}
 		free(grid);
-		return ();
+		return;
 	}
 }
