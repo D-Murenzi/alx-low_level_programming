@@ -1,2 +1,2 @@
 #include <stdio.h>
-int main(int argc, char *argv[]);
+int _ main(int argc, char *argv[]);

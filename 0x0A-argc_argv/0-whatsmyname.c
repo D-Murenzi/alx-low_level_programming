@@ -2,12 +2,12 @@
 #nclude "main.h"
 #include <stdlib.h>
 /**
- * main-call the function and prints its name
+ * _main-call the function and prints its name
  * @argc: number arguments main function receives
  * @argv:array of strings made of arguments
  * Return: 0 on success
  */
-int main(int argc, char *argv[])
+int _main(int argc, char *argv[])
 {
 	if (argc >= 1)
 	{
