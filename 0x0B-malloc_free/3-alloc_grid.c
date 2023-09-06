@@ -20,6 +20,11 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 	grid = malloc(width * sizeof(int *));
+	if (grid == NULL)
+	{
+		free(grid);
+		return (NULL);
+	}
 	for (a = 0; a < width; a++)
 	{
 		grid[a] = malloc(height * sizeof(int));
@@ -27,6 +32,15 @@ int **alloc_grid(int width, int height)
 		/*now each element of grid holds a pointer to a memory that*/
 		/*can hold an array of size height*/
 
+		if (*grid == NULL)
+		{
+			for (a = 0; a < width; a++)
+			{
+				free(grid[a]);
+				free(grid);
+				return (NULL);
+			}
+		}
 		for (b = 0; b < height; b++)
 		{
 			grid[a][b] = 0;
