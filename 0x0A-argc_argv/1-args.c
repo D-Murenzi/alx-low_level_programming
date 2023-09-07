@@ -1,7 +1,6 @@
 /* this function prints the number of arguments passed to it */
-#include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * main-call other function
  * @argc:number of arguments
