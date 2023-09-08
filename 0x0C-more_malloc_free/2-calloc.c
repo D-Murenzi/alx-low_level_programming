@@ -1,4 +1,4 @@
-/* this program allocates memory for an array*/
+/* this  hey program allocates memory for an array*/
 
 #include "main.h"
 #include <stdio.h>
