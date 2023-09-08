@@ -1,7 +1,7 @@
 /* this program is a function that allocates memory using malloc function */
-#include<stdio.h>
-#include<stdlib.h>
-#include"main,h"
+#include <stdio.h>
+#include <stdlib.h>
+#include "main.h"
 /**
  * malloc_checked-allocates memory spaces using malloc
  * @b:the interger value whose size is allocated as memory
