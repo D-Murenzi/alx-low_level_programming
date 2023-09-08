@@ -1,7 +1,7 @@
-#ifndef MAIN_H
+#ifdef MAIN_H
 #def MAIN_H
 #include <stdio.h>
-#include <sdtlib.h>
+#include <stdlib.h>
 #include <string.h>
 void *malloc_checked(unsigned int b);
 char *string_nconcat(char *s1, char *s2, unsigned int n);
