@@ -12,7 +12,7 @@
  * Return:pointer to the memory
  */
 
-void *custom_memset(void *dest, int c, size_t n)
+void *custom_mem(void *dest, int c, size_t n)
 {
 	unsigned char *ptr = dest;
 	unsigned char uc = (unsigned char)c;
@@ -45,6 +45,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	custom_memset(a, 0, nmemb);
+	custom_mem(a, 0, nmemb);
 	return (a);
 }
