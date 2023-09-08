@@ -31,5 +31,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	for (i = 0; i < (nmemb * size); i++)
 	{
 		d[i] = 0;
+	}
 	return (a);
 }
