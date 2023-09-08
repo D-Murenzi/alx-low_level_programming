@@ -1,5 +1,5 @@
 /* this  hey program allocates memory for an array*/
-
+#include <string.h>
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
