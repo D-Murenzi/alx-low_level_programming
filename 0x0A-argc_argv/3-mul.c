@@ -15,10 +15,11 @@ int main(int argc, char *argv[])
 
 	if (argc <= 2)
 	{
-		printf("error\n");
+		printf("Error\n");
 		return (1);
 	}
-	a =((int *)argv)[1] * ((int *)argv)[2];
+
+	a = atoi(argv)[1])*(atoi(argv)[2]);
 	printf("%d\n", a);
 	return (0);
 }
