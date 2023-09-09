@@ -12,14 +12,17 @@
 int main(int argc, char *argv[])
 {
 	int a;
+	int b;
+	int c;
 
 	if (argc <= 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-
-	a = atoi(argv)[1])*(atoi(argv)[2]);
+	b = atoi(argv[1]);
+	c = atoi(argv[2]);
+	a = b * c;
 	printf("%d\n", a);
 	return (0);
 }
