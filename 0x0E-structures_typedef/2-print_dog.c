@@ -2,6 +2,8 @@
 #include "dog.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include "main.h"
+
 /**
  * print_dog-function to print memners of the structure dog
  * @d: pointer to the structure
