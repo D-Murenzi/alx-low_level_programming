@@ -1,8 +1,8 @@
 /* this is function that initialize a variable of structure dog */
 #include <stdio.h>
 #include "dog.h"
-#include <stdlib.h>
-#include "main.h"
+
+
 
 /**
  * init_dog-function that intialize a structure
