@@ -10,7 +10,7 @@ int op_mod(int a, int b);
 
 
 /**
- * struct - struct opp
+ * struct op- struct opp
  * @op: pointer to a string
  * @f: pointer to a function
  * Description: this structure contains pointers to string and functions
@@ -20,6 +20,6 @@ typedef struct op
 {
 	char *op;
 	int (*f)(int a, int b);
-}op_t;
+} op_t;
 
 #endif

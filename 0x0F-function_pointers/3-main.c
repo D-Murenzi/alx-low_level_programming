@@ -6,7 +6,7 @@
 /**
  * main-calls other functions
  * @argc: number of arguments passed
- * @argv[]:list of arguments passed
+ * @argv:list of arguments passed
  * Return: 0 on success or something else on failure
  */
 int main(int argc, char *argv[])
@@ -17,18 +17,18 @@ int main(int argc, char *argv[])
 	if (argc != 4)
 	{
 		printf("Error\n");
-		exit (98);
+		exit(98);
 	}
-	if( ((argv[2][0] == '/') || (argv[2][0] == '%')) && (atoi(argv[3]) == 0))
+	if (((argv[2][0] == '/') || (argv[2][0] == '%')) && (atoi(argv[3]) == 0))
 	{
 		printf("Error\n");
-		exit (100);
+		exit(100);
 	}
 	operation = get_op_func(argv[2]);
 	if (operation == NULL)
 	{
 		printf("Error\n");
-		exit (99);
+		exit(99);
 	}
 
 	a = operation(atoi(argv[1]), atoi(argv[3]));
