@@ -4,13 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char *_strcpy(char *dest, char *src);
-int _strlen(char *s);
-dog_t *new_dog(char *name, float age, char *owner);
-void init_dog(struct dog *d, char *name, float age, char *owner);
-void print_dog(struct dog *d);
-
-
 /**
  * struct dog-is a structure about dog
  * @name: stands for name of the dog
@@ -20,13 +13,16 @@ void print_dog(struct dog *d);
  * Description: stores information on dog
  */
 
-struct dog
+typedef struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-};
+} dog_t;
 
-typedef struct dog dog_t;
-
+int _strlen(char *s);
+dog_t *new_dog(char *name, float age, char *owner);
+char *_strcpy(char *dest, char *src);
+void print_dog(struct dog *d);
+void init_dog(struct dog *d, char *name, float age, char *owner);
 #endif
