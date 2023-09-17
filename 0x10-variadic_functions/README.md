@@ -1,0 +1,1 @@
+this folder is about the variadic functions, its for learning purpose only
