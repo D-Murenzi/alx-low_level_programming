@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.H>
+#include <stdio.h>
 
 int actual_sqrt_recursion(int n, int i);
 
