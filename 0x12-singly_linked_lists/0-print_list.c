@@ -1,4 +1,4 @@
-/* this function prints all the elements of list_t list which is a linked list*/
+/*this function prints all the elements of list_t list which is a linked list*/
 
 #include <stdio.h>
 #include "lists.h"
@@ -30,7 +30,7 @@ size_t print_list(const list_t *h)
 			}
 			else
 			{
-				printf("[0] (nil)");
+				printf("[0] (nil)\n");
 			}
 			ptr = ptr->next;
 		}
@@ -39,6 +39,6 @@ size_t print_list(const list_t *h)
 	else
 	{
 		printf("Error");
-		exit (98);
+		exit(98);
 	}
 }
