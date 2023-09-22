@@ -24,5 +24,5 @@ size_t list_len(const list_t *h)
 		}
 		return (n);
 	}
-	exit(98);
+	return (0);
 }

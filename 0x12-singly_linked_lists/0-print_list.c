@@ -1,9 +1,30 @@
 /*this function prints all the elements of list_t list which is a linked list*/
-
 #include <stdio.h>
 #include "lists.h"
 #include <stdlib.h>
-#include <string.h>
+
+/**
+ * _strlen-calcluates the lenght of the string
+ * @str:pointer to the  string
+ * Return: lenth of the string
+ */
+
+unsigned int _strlen(char *str)
+{
+	unsigned int a;
+
+	if (str == 0)
+	{
+		return (0);
+	}
+	a = 0;
+	while(*str != '\0')
+	{
+		a++;
+		str++;
+	}
+	return (a);
+}
 
 /**
  * print_list-function to print elements of list
@@ -11,12 +32,12 @@
  * Return: number of nodes of the linked lists
  */
 
-size_t print_list(const list_t *h)
+size_t print_list(list_t *h)
 {
 	if (h != NULL)
 	{
 		int numbers;
-		const list_t *ptr;
+		list_t *ptr;
 
 		numbers = 0;
 		ptr = h;
@@ -26,6 +47,7 @@ size_t print_list(const list_t *h)
 
 			if (ptr->str != NULL)
 			{
+				ptr->len = _strlen(ptr->str);
 				printf("[%d] %s\n", ptr->len, ptr->str);
 			}
 			else
