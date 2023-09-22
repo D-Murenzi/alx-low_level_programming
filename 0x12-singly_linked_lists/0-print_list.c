@@ -18,7 +18,7 @@ unsigned int _strlen(char *str)
 		return (0);
 	}
 	a = 0;
-	while(*str != '\0')
+	while (*str != '\0')
 	{
 		a++;
 		str++;
