@@ -19,7 +19,7 @@ size_t print_listint(const listint_t *h)
 		return (0);
 	}
 	ptr = h;
-	a = 0;
+	a = 1;
 	while (ptr->next != NULL)
 	{
 		ptr = ptr->next;
