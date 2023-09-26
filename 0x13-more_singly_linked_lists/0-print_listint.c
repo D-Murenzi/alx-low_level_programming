@@ -27,7 +27,7 @@ size_t print_listint(const listint_t *h)
 		ptr = ptr->next;
 
 	}
-	printf("%d\n",ptr->n);
+	printf("%d\n", ptr->n);
 	a++;
 	return (a);
 }
