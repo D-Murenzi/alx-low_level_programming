@@ -19,11 +19,11 @@ size_t print_listint(const listint_t *h)
 		return (0);
 	}
 	ptr = h;
-	a = 1;
+	a = 0;
 	while (ptr->next != NULL)
 	{
-		ptr = ptr->next;
 		a++;
+		ptr = ptr->next;
 		printf("%d\n", ptr->n);
 	}
 	return (a);
