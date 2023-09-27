@@ -1,6 +1,6 @@
 /* this function adds a new node at index as given*/
 
-#include <stdio.h
+#include <stdio.h>
 #include "lists.h"
 
 /**
