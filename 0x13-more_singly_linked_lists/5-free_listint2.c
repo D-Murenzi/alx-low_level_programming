@@ -1,7 +1,7 @@
 /* this function frees a linked list and sets a pointer to the pointer*/
 /* to the list to null */
 
-1#include <stdio.h>
+#include <stdio.h>
 #include "lists.h"
 
 /**
@@ -14,19 +14,19 @@ void free_listint2(listint_t **head)
 {
 	listint_t *ptr;
 
-	if (head == NULL)
+	if (head)
 	{
-		return;
+		if (*head == NULL)
+		{
+			return;
+		}
+		while ((*head) != NULL)
+		{
+			ptr = *head;
+			*head = (*head)->next;
+			free(ptr);
+		}
+		*head = NULL;
+
 	}
-	if (*head == NULL)
-	{
-		return;
-	}
-	while ((*head) != NULL)
-	{
-		ptr = *head;
-		*head = (*head)->next;
-		free(ptr);
-	}
-	*head = NULL;
 }
