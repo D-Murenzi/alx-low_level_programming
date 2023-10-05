@@ -11,31 +11,46 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;
-	int a;
-	int b;
-
-	char *array;
-
-	array = malloc((letters + 1));
-	if (array == NULL)
-	{
-		return (0);
-	}
-
 	if (filename)
 	{
-		fd = open(filename, O_RDONLY);
-		if (fd < 0)
+		int fd, a, c;
+		char *buff;
+
+		buff = malloc(letters + 1);
+		if (buff != NULL)
+		{
+			for(a = 0; a <= (int)letters; a++)
+			{
+				buff[a] = '\0';
+			}
+		}
+		else
 		{
 			return (0);
 		}
-		b = 0;
-		while ((a = read(fd, array, letters)) > 0)
+		fd = open(filename, O_RDONLY);
+		if (fd < 0)
 		{
-			b = b + (write(STDOUT_FILENO, array, letters));
+			free(buff);
+			return (0);
 		}
-		return (b);
+		read(fd, buff, letters);
+		if (a < 0)
+		{
+			free(buff);
+			close(fd);
+			return (0);
+		}
+		c = write(STDOUT_FILENO, buff, letters);
+		if (c < 0)
+		{
+			free(buff);
+			close(fd);
+			return (0);
+		}
+		free(buff);
+		close(fd);
+		return (c);
 	}
 	return (0);
 }
