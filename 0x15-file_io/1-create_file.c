@@ -13,16 +13,16 @@ int create_file(const char *filename, char *text_content)
 {
 	if (filename)
 	{
-		int fd;
+		int fd, b;
 
-		fd = open(filename, O_RDWR | O_CREATE, S_IRUSR);
+		fd = open(filename, O_RDWR | O_CREAT, S_IRUSR);
 		if (fd < 0)
 		{
 			return (-1);
 		}
 		if (text_content)
 		{
-			trancate(filename, 0);
+			truncate(filename, 0);
 			b = write(fd, text_content, strlen(text_content));
 			if (b <= 0)
 			{
@@ -32,7 +32,7 @@ int create_file(const char *filename, char *text_content)
 		}
 		else
 		{
-			trancate(filename, 0);
+			truncate(filename, 0);
 		}
 		close(fd);
 		return (1);
