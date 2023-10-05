@@ -13,6 +13,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
 	int a;
+	int b;
 
 	char *array;
 
@@ -29,14 +30,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		{
 			return (0);
 		}
-		a = read(fd, array, letters);
-		if (a < 0)
+		b = 0;
+		while ((a = read(fd, array, letters)) > 0)
 		{
-			return (0);
+			b = b + (write(STDOUT_FILENO, array, letters));
 		}
-		write(STDOUT_FILENO, array, a);
-
-		return (a);
+		return (b);
 	}
 	return (0);
 }
