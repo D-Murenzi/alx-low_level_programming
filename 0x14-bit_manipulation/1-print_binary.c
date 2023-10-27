@@ -1,7 +1,6 @@
 /* this function prints a binary representation of a given number*/
 #include <stdio.h>
 #include "main.h"
-#include <stdlib.h>
 
 /**
  * print_binary-prints the bit representation of a number
@@ -13,7 +12,7 @@ void print_binary(unsigned long int n)
 {
 	unsigned long int b;
 	int c;
-	
+
 	b = n;
 	c = -1;
 	while (b > 0)
@@ -33,5 +32,4 @@ void print_binary(unsigned long int n)
 		}
 		c--;
 	}
-	return;
 }
