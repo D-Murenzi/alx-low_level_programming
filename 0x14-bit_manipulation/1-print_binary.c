@@ -11,33 +11,27 @@
 
 void print_binary(unsigned long int n)
 {
-	if (n > 1)
+	unsigned long int b;
+	int c;
+	
+	b = n;
+	c = -1;
+	while (b > 0)
 	{
-		unsigned long int b;
-		
-		n = n >> 1;
-		b = n & 1;
-		print_binary(n);
-		_putchar(b + '0');
+		c++;
+		b = b >> 1;
 	}
-	_putchar(n + '0');
-}
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
-int main(void)
-{
-	print_binary(0);
-	printf("\n");
-	print_binary(1);
-	printf("\n");
-	print_binary(3);
-	printf("\n");
-	print_binary(4);
-	printf("\n");
-	print_binary((1 << 10) + 1);
-	printf("\n");
-	return (0);
+	while (c >= 0)
+	{
+		if (((1 << c) & n) > 0)
+		{
+			_putchar(1 + '0');
+		}
+		else
+		{
+			_putchar('0');
+		}
+		c--;
+	}
+	return;
 }
