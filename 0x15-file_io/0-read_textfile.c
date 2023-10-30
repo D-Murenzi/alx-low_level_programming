@@ -4,6 +4,13 @@
 #include <stdio.h>
 #include "main.h"
 
+/**
+ * read_textfile-reads a text from a file and print it to stdout
+ * @filename: the file to read from
+ * @letters: the number of bytes to read and write
+ * Return: 0 on failure or number of bytes read and wrote on stdout
+ */
+
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	if (filename)
@@ -11,7 +18,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		char *ptr;
 		ssize_t b, c;
 		int a;
-		
+
 		ptr = malloc(sizeof(char) * INT_MAX);
 		a = open(filename, O_RDONLY);
 		if (a == -1)
@@ -19,7 +26,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 			free(ptr);
 			return (0);
 		}
-		if ((b = read(a, ptr, letters)) == -1)
+		b = read(a, ptr, letters);
+		if (b == -1)
 		{
 			free(ptr);
 			return (0);
