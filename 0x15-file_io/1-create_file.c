@@ -17,22 +17,27 @@ int create_file(const char *filename, char *text_content)
 {
 	if (filename)
 	{
+
 		char *ptr;
 		int a, b;
 
-		ptr = text_content;
-		b = 0;
-		while (*ptr != '\0')
-		{
-			b++;
-			ptr++;
-		}
 		a = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600);
 		if (a < 0)
 		{
 			return (-1);
 		}
-		write(a, text_content, b);
+		if (text_content)
+		{
+			ptr = text_content;
+			b = 0;
+			while (*ptr != '\0')
+			{
+				b++;
+				ptr++;
+			}
+			write(a, text_content, b);
+			return (1);
+		}
 		return (1);
 	}
 	return (-1);
