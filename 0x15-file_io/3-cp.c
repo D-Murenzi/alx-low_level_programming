@@ -1,5 +1,6 @@
 /* this program copies one file to another */
 
+#include <string.h>
 #include <limits.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -103,7 +104,7 @@ void c_close(int fd)
 int main(int argc, char *argv[])
 {
 	char *ptr, *ptr2;
-	int a, b, d = 1, c = -1;
+	int a, b, d, c = -1;
 
 	if (argc != 3)
 	{
@@ -120,8 +121,9 @@ int main(int argc, char *argv[])
 	ptr2 = ptr;
 	while (c != 0)
 	{
+		d = 1;
 		c = c_read(a, ptr, 1024, argv[1]);
-		c_write(b, ptr, 1024, argv[2]);
+		c_write(b, ptr, c, argv[2]);
 		while (d <= 1025)
 		{
 			*ptr2 = '\0';
@@ -129,7 +131,6 @@ int main(int argc, char *argv[])
 			d++;
 		}
 	}
-	dprintf(b, "\n");
 	free(ptr);
 	if (close(a))
 	{
