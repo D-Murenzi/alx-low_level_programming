@@ -22,7 +22,7 @@ int c_open(char *filename, int flags, int mode)
 	a = open(filename, flags, mode);
 	if (a < 0)
 	{
-		dprintf(STDERR_FILENO, "Can't open file %s\n", filename);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
 		exit(98);
 	}
 	return (a);
@@ -44,7 +44,7 @@ int c_read(int fd, char *ptr, int bytes, char *filename)
 	a = read(fd, ptr, bytes);
 	if (a < 0)
 	{
-		dprintf(STDERR_FILENO, "Can't read from file %s", filename);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s", filename);
 		close(fd);
 		free(ptr);
 		exit(98);
@@ -68,7 +68,7 @@ int c_write(int fd, char *ptr, int bytes, char *filename)
 	a = write(fd, ptr, bytes);
 	if (a < 0)
 	{
-		dprintf(STDERR_FILENO, "Can't write to %s\n", filename);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
 		free(ptr);
 		close(fd);
 		exit(99);
@@ -117,7 +117,7 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 	a = c_open(argv[1], O_RDONLY, 0);
-	b = c_open(argv[2], O_RDWR | O_CREAT | O_TRUNC, 0664);
+	b = c_open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	ptr2 = ptr;
 	while (c != 0)
 	{
