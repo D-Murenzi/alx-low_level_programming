@@ -23,7 +23,7 @@ int c_open(char *filename, int flags, int mode)
 	if (a < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
-		exit(98);
+		exit(99);
 	}
 	return (a);
 }
@@ -44,7 +44,7 @@ int c_read(int fd, char *ptr, int bytes, char *filename)
 	a = read(fd, ptr, bytes);
 	if (a < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s", filename);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
 		close(fd);
 		free(ptr);
 		exit(98);
@@ -89,7 +89,7 @@ void c_close(int fd)
 	a = close(fd);
 	if (a != 0)
 	{
-		dprintf(STDERR_FILENO, "Can't close fd %d\n", a);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", a);
 		exit(100);
 	}
 }
