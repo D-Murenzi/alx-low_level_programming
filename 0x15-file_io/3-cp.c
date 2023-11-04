@@ -89,7 +89,7 @@ void c_close(int fd)
 	a = close(fd);
 	if (a != 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd", a);
+		dprintf(STDERR_FILENO, "Error: Can't close fd");
 		exit(100);
 	}
 }
