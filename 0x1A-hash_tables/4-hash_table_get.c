@@ -12,7 +12,7 @@
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	unsigned long int index;
-	hash_node_t *ptr;
+	hash_node_t *ptr, *ptr1;
 	char *value;
 
 	index = key_index((unsigned char *)key, ht->size);
@@ -20,9 +20,29 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	if (ht->array[index])
 	{
 		ptr = ht->array[index];
-		value = ptr->value;
-
-		return (value);
+		if (hash_djb2((unsigned char *)key) == hash_djb2((unsigned char *)ptr->key))
+		{
+			value = ptr->value;
+			return (value);
+		}
+		else
+		{
+			ptr1 = ptr;
+			while (!(hash_djb2((unsigned char *)key)
+				 == hash_djb2((unsigned char *)ptr1->key)))
+			{
+				if (ptr1->next != NULL)
+				{
+					ptr1 = ptr1->next;
+				}
+				else
+				{
+					return (NULL);
+				}
+			}
+			value = ptr1->value;
+			return (value);
+		}
 	}
 	return (NULL);
 }
