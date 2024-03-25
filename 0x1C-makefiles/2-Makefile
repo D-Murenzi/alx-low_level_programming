@@ -1,0 +1,10 @@
+CC=gcc
+SRC=$(wildcard *.c)
+OBJ=$(wildcard *.o)
+NAME=school
+all:$(NAME)
+
+$(NAME):$(OBJ)
+	$(CC) $(LDFLAGS) $(OBJ) -o $(NAME)
+%.o:%.c
+	$(CC) $(CFLAGS) -c $< -o $@
